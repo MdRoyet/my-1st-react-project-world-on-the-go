@@ -9,6 +9,11 @@
   background-color: aqua;
 }
 
+.btn {
+  display: flex;
+  gap: 10px;
+}
+
 .radiant-btn {
   position: relative;
   padding: 14px 32px;
