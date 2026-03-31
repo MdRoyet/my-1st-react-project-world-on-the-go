@@ -1,0 +1,55 @@
+.country {
+  border: 2px solid salmon;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.Country-Visited {
+  background-color: aqua;
+}
+
+.radiant-btn {
+  position: relative;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ff4d6d, #ff9a3c, #ffd93d);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Glow layer */
+.radiant-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #ff4d6d, #ff9a3c, #ffd93d);
+  filter: blur(18px);
+  opacity: 0.7;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+
+/* Soft glass overlay */
+.radiant-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effects */
+.radiant-btn:hover {
+  transform: scale(1.08);
+}
+
+.radiant-btn:hover::before {
+  opacity: 1;
+}
